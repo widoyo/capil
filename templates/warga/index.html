@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+    <div class="large-12 columns">
+        <h2>Warga</h2>
+        {% if kode %}
+        <p>KODE: {{ kode }}</p>
+        {%endif %}
+        <table>
+            <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>Lahir</th>
+                <th>Kelamin</th>
+                <th>RW RT</th>
+            </tr>
+        {% for w in wargas %}
+        <tr>
+            <td>{{ w.kode }}</td>
+            <td>{{ w.nama}}</td>
+            <td>{{ w.tg_lahir }}</td>
+            <td>{{ w.kelamin }}</td>
+            <td>{{ w.rwrt }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "slim/views": "0.1.*",
+        "twig/twig": "1.*"
+    }
+}
